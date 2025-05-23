@@ -1,0 +1,33 @@
+name: closet
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy>=1.24.0
+  - pillow>=10.0.0
+  - matplotlib>=3.7.0
+  - scipy>=1.10.0
+  - scikit-image>=0.20.0
+  - scikit-learn>=1.2.0
+  - pandas
+  - h5py  # To handle HDF5 files
+  - pip:
+    # Training dependencies
+    - tensorflow>=2.13.0
+    - keras-tuner>=1.3.5  # Required for model hyperparameter tuning
+    - protobuf>=3.20.0  # For TensorFlow compatibility
+    # Visualization and analysis
+    - jupyter  # For interactive notebooks
+    - seaborn  # Advanced data visualization
+    # Image processing
+    - opencv-python>=4.9.0
+    - rembg>=2.0.50  # For background removal
+    - onnxruntime>=1.16.0
+    # API and utilities
+    - fastapi>=0.104.0
+    - uvicorn[standard]>=0.24.0
+    - python-multipart>=0.0.6
+    - requests>=2.31.0
+    - tqdm>=4.66.0
